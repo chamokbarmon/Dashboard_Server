@@ -15,7 +15,7 @@ app.listen(Port, () => {
 const { MongoClient, ObjectId } = require("mongodb");
 
 const uri =
-  "mongodb+srv://DashboardDB:Pd04y1XPCxJupl96@cluster0.ojfpjwh.mongodb.net/?retryWrites=true&w=majority";
+  `mongodb+srv://${process.env.REACT_USERNAME}:${process.env.REACT_DBPASSWORD}@cluster0.ojfpjwh.mongodb.net/?retryWrites=true&w=majority`
 
 const client = new MongoClient(uri);
 
